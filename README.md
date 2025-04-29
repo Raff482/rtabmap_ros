@@ -1,3 +1,64 @@
+# Fixposition Vision-RTK2
+
+This project uses only the IMU data from the **Fixposition Vision-RTK2** sensor, tested with firmware version `fp_release_vr2_2.58.2_189`.
+
+## Intel RealSense D435
+
+An **Intel RealSense D435** camera was used in this project.
+
+---
+
+## Prerequisites
+
+- Ubuntu 22.04  
+- ROS 2 Humble  
+- Eigen 3.3.7  
+- `fixposition_driver` version 5.0.0  
+- `fixposition_gnss_tf`  
+- `librealsense`  
+
+---
+
+## Installation
+
+### Step 1
+
+Download `rtabmap_ros` by following the official guide (see the **References** section below).
+
+### Step 2
+
+Download the Intel RealSense D435 drivers from the official repository:  
+👉 https://github.com/IntelRealSense/librealsense
+
+### Step 3
+
+Download Eigen version 3.3.7 from the official repository:  
+👉 [https://gitlab.com/libeigen/eigen/-/releases/3.3.7](https://gitlab.com/libeigen/eigen/-/releases/3.3.7)
+
+### Step 4
+
+Inside `ros2_ws/src`, clone the official `fixposition_gnss_tf` repository:  
+👉 https://github.com/fixposition/fixposition_gnss_tf
+
+### Step 5
+
+Inside `ros2_ws/src`, clone the official `fixposition_driver` repository at version 5.0.0:  
+👉 [https://github.com/fixposition/fixposition_driver/tree/5.0.0](https://github.com/fixposition/fixposition_driver/tree/5.0.0)
+
+> ⚠️ After cloning, **delete the `fixposition_driver_ros1` folder before compiling**.
+
+### Step 6
+
+Once everything is downloaded and compiled, check the port used by the RTK2 connection.
+
+Go to `ros2_ws/src/fixposition_utility/fixposition_driver_ros2/launch` and open the `TCP.yaml` file.  
+Edit the line starting with `ip:` and insert the IP address where RTK2 establishes the connection.
+
+---------
+
+
+
+
 rtabmap_ros
 ===========
 
