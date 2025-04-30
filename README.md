@@ -63,7 +63,7 @@ Edit the line starting with `ip:` and insert the IP address where RTK2 establish
 ### Step 7
 
 Inside `ros2_ws/src`, clone the official agilexrobotics/hunter_ros2:
-👉https://github.com/agilexrobotics/hunter_ros2
+👉 https://github.com/agilexrobotics/hunter_ros2
 
 > ⚠️ After cloning, go to `ros2_ws/src/scout_ros2/scout_base` and open the 'CMakeLists.txt' file.
   Write 'find_package(tf2_geometry_msgs REQUIRED)' and in ament_target_dependencies(scout_base_node rclcpp tf2 tf2_ros ...) near the tf2_ros write tf2_geometry_msgs.
